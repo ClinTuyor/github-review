@@ -22,14 +22,14 @@ function addTodo(event) {
   event.preventDefault();
   const newTodo = todoInput.value.trim();
   if (newTodo) {
-    todo.push(newTodo);
+    todos.push(newTodo);
     todoInput.value = '';
     renderTodos();
   }
 }
 
 function editTodo(index) {
-  const updatedTodo = prompt('Edit todo:', todo[index]);
+  const updatedTodo = prompt('Edit your todo:', todo[index]);
   if (updatedTodo !== null) {
     todos[index] = updatedTodo.trim();
     renderTodos();
