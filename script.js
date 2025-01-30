@@ -14,6 +14,12 @@ function renderTodos() {
       <button onclick="editTodo(${index})">Edit</button>
       <button onclick="deleteTodo(${index})">Delete</button>
     `;
+    const editButton = li.querySelector('.edit-btn');
+    const deleteButton = li.querySelector('.delete-btn');
+
+    editBtn.addEventListener('click', () => editTodo(index));
+    deleteBtn.addEventListener('click', () => deleteTodo(index));
+    
     todoList.appendChild(li);
   });
 }
