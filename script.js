@@ -11,15 +11,15 @@ function renderTodos() {
     li.className = 'todo-item';
     li.innerHTML = `
       <span>${todo}</span>
-      <button onclick="editTodo(${index})">Edit</button>
-      <button onclick="deleteTodo(${index})">Delete</button>
+      <button class="edit-btn">Edit</button>
+      <button class="delete-btn">Delete</button>
     `;
     const editButton = li.querySelector('.edit-btn');
     const deleteButton = li.querySelector('.delete-btn');
 
-    editBtn.addEventListener('click', () => editTodo(index));
-    deleteBtn.addEventListener('click', () => deleteTodo(index));
-    
+    editButton.addEventListener('click', () => editTodo(index));
+    deleteButton.addEventListener('click', () => deleteTodo(index));
+
     todoList.appendChild(li);
   });
 }
@@ -35,7 +35,7 @@ function addTodo(event) {
 }
 
 function editTodo(index) {
-  const updatedTodo = prompt('Edit your todo:', todo[index]);
+  const updatedTodo = prompt('Edit your todo:', todos[index]);
   if (updatedTodo !== null) {
     todos[index] = updatedTodo.trim();
     renderTodos();
@@ -44,7 +44,7 @@ function editTodo(index) {
 
 function deleteTodo(index) {
   if (confirm('Are you sure you want to delete this todo?')) {
-    todo.splice(index, 1);
+    todos.splice(index, 1);
     renderTodos();
   }
 }
