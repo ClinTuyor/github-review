@@ -1,4 +1,4 @@
-let todo [];
+let todos = [];
 
 const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
@@ -6,7 +6,7 @@ const todoList = document.getElementById('todo-list');
 
 function renderTodos() {
   todoList.innerHTML = '';
-  todo.forEach((todo, index) => {
+  todos.forEach((todo, index) => {
     const li = document.createElement('li');
     li.className = 'todo-item';
     li.innerHTML = `
