@@ -36,7 +36,7 @@ h1 {
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -71,7 +71,7 @@ button:hover {
 }
 
 .todo-item button {
-    padding: 5px 10px;
+    padding: 5px 5px;
     background-color: #dc3545;
     border: none;
     color: #fff;
@@ -81,4 +81,8 @@ button:hover {
 
 .todo-item button:hover {
     background-color: #bd2130;
+}
+
+.edit-btn {
+    margin: 0 10px;
 }
